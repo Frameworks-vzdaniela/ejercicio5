@@ -3,20 +3,23 @@
 @theme {
   --color-primary: #641c34;
   --color-secondary: #e40078;
+
   --container-center: true;
   --container-padding: 2rem;
 }
-
-@media (width >= 640px) {
-  --container-padding: 2rem;
-}
-
-@media (width >= 1024px) {
-  --container-padding: 4rem;
-}
-
-@media (width >= 1280px) {
-  --container-padding: 5rem;
-}
+ @media (width >= 640px) {
+    /* sm */
+    --container-padding: 2rem;
+  }
 
 
+  @media (width >= 1024px) {
+    /* lg */
+    --container-padding: 4rem;
+  }
+
+
+  @media (width >= 1280px) {
+    /* xl */
+    --container-padding: 5rem;
+  }

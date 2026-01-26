@@ -9,6 +9,7 @@ import MenuResponsivo from "./MenuResponsivo";
 import { GiFishCorpse } from "react-icons/gi";
 import { GiWineBottle } from "react-icons/gi";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [abierto, setAbierto] = useState(false);
@@ -35,13 +36,16 @@ const Navbar = () => {
           <ul className="flex items-center gap-7 text-gray-600">
             {navbarLinks.map((item) => (
               <li key={item.id}>
-                <motion.a
-                  href={item.url}
+                <motion.div
                   whileHover={{ scale: 1.1 }}
-                  className="inline-block py-1 px-3 hover:text-primary"
                 >
-                  {item.title}
-                </motion.a>
+                  <Link
+                    to={item.url}
+                    className="inline-block py-1 px-3 hover:text-primary"
+                  >
+                    {item.title}
+                  </Link>
+                </motion.div>
               </li>
             ))}
           </ul>

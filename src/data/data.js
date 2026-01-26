@@ -3,18 +3,18 @@ const navbarLinks = [
     id: 1,
     name: "Home",
     title: "Inicio",
-    url: "/home"
-  },{
+    url: "/home"  },
+    {
     id: 2,
-    name: "About",
+    name: "Cervezas",
     title: "Cervezas",
-    url: "/about"
+    url: "/cervezas"
   },
   {
     id: 3,
-    name: "courses",
+    name: "About",
     title: "Nosotros",
-    url: "/courses"
+    url: "/about "
   }
 ];
 
