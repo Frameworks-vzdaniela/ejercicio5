@@ -14,7 +14,7 @@ const navbarLinks = [
     id: 3,
     name: "About",
     title: "Nosotros",
-    url: "/about "
+    url: "/about"
   }
 ];
 

@@ -1,11 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const MenuResponsivo = ({ open, navbarLinks, setAbierto }) => {
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {open && (
         <>
-          {/* FONDO OSCURO (CLICK FUERA CIERRA) */}
+          {/* FONDO OSCURO */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.4 }}
@@ -22,16 +23,17 @@ const MenuResponsivo = ({ open, navbarLinks, setAbierto }) => {
             transition={{ duration: 0.3 }}
             className="fixed top-24 left-0 w-full z-50 md:hidden"
           >
-            <div className="bg-primary text-white mx-6 rounded-xl py-10">
+            <div className="bg-primary text-white mx-6 rounded-xl py-10 shadow-2xl">
               <ul className="flex flex-col items-center gap-8 text-xl font-semibold uppercase">
                 {navbarLinks.map((item) => (
                   <motion.li
                     key={item.id}
-                    whileHover={{ scale: 1.15 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="cursor-pointer hover:text-black"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="cursor-pointer hover:text-black transition-colors"
+                    onClick={() => setAbierto(false)} 
                   >
-                    {item.title}
+                    <Link to={item.url}>{item.title}</Link>
                   </motion.li>
                 ))}
               </ul>
