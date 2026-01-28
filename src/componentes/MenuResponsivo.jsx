@@ -31,9 +31,13 @@ const MenuResponsivo = ({ open, navbarLinks, setAbierto }) => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="cursor-pointer hover:text-black transition-colors"
-                    onClick={() => setAbierto(false)} 
                   >
-                    <Link to={item.url}>{item.title}</Link>
+                    <Link 
+                      to={item.url}
+                      onClick={() => setAbierto(false)}
+                    >
+                      {item.title}
+                    </Link>
                   </motion.li>
                 ))}
               </ul>
